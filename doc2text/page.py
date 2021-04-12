@@ -230,7 +230,7 @@ def process_image(orig_im):
     kernel = np.ones((5, 5), np.float32) / 25
     smooth2d = cv2.filter2D(cropped, -1, kernel=kernel)
 
-    return (smooth2d, num_tries)
+    return (orig_im, num_tries)
 
 
 def rad_to_deg(theta):
